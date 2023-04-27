@@ -5,10 +5,13 @@ import Nav from './Nav'
 function Header() {
   return (
     <header>
-        <Link to='/'>
-        <img src={Logo} alt='logo' role='link'></img>
-        </Link>
-        <Nav />
+        <div className='container grid'>
+            <Link to='/' className='logo'>
+            <img src={Logo} alt='logo' role='link'></img>
+            </Link>
+            <Nav />
+        </div>
+
     </header>
   )
 }

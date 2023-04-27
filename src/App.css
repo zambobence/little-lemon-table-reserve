@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
+:root {
+  --primary-1: #F4CE14;
+  --primary-2: #495E57;
+  --secondary-1:#EE9972;
+  --secondary-2: #FBDABB;
+  --secondary-3: #EDEFEE;
+  --secondary-4: #333333;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+li {
+  list-style: none;
+}
+
+a,
+button {
+  font-size: inherit;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.25rem;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  grid-column: 1 / 3;
+}
+
+nav {
+  grid-column: 3 / -1;
+}
+
+.br {
+  border-radius: 1rem;
+}
+
+.display-title {
+  font-family: 'Markazi Text', serif;
+  font-size: 400;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.subt-title {
+  font-family: 'Markazi Text', serif;
+  font-size: 1.875rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
+
+.lead-text {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.section-title {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.section-categories {
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.card-title {
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+p,
+.paragraph {
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.highlighted {
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
 }
