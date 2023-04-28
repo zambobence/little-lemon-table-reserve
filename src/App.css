@@ -32,14 +32,15 @@ button {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
+  max-width: 450px;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
   gap: 1.25rem;
-  align-items: center;
 }
 
 .container {
@@ -68,16 +69,18 @@ nav {
 
 .display-title {
   font-family: 'Markazi Text', serif;
-  font-size: 400;
+  font-size: 4rem;
   font-weight: 400;
   line-height: 1.5;
+  color: var(--primary-1)
 }
 
-.subt-title {
+.sub-title {
   font-family: 'Markazi Text', serif;
   font-size: 1.875rem;
   font-weight: 400;
   line-height: 3rem;
+  color: var(--secondary-3)
 }
 
 .lead-text {
@@ -115,4 +118,95 @@ p,
   font-family: 'Karla', sans-serif;
   font-size: 1rem;
   font-weight: 500;
+}
+
+.call-to-action {
+  background-color: var(--primary-2);
+}
+
+.btn {
+  background-color: #F4CE14;
+  border-radius: 1rem;
+  border: none;
+  padding: .5rem 1.2rem;
+}
+
+.flex {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+
+.hero-img {
+  object-fit: cover;
+  object-position: 0 -220px;
+}
+
+.hero-content-container {
+  grid-column: 1 / 7;
+}
+
+.hero-img-container {
+  grid-column: 8 / -1;
+  max-height: 40vh;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.call-to-action {
+  padding: 2rem 0;
+}
+
+.call-to-action p {
+  margin-bottom: 1rem;
+}
+
+.specials {
+  padding: 2rem 0;
+}
+.specials h1 {
+  grid-column: 1 / 8;
+}
+
+.price {
+  color: var(--secondary-1);
+}
+
+.specials button {
+  grid-column: 11 / -1;
+}
+
+.card {
+  grid-column: span 4;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: var(--secondary-3);
+}
+
+.card-bottom {
+  padding: 1rem;
+}
+
+.card-description {
+  color: var(--primary-2);
+}
+
+.card-bottom h3,
+.card-description {
+  margin: .5rem 0;
+}
+
+
+
+.icon {
+  width: fit-content;
+  display: initial;
+}
+
+.order-now-comp {
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+  align-items: end;
 }
