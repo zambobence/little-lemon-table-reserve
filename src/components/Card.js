@@ -4,21 +4,22 @@ import Price from './Price'
 import Flex from './Flex'
 import OrderNowComponent from './OrderNowComponent'
 
-function Card() {
+function Card({data}) {
+  console.log(data)
   return (
     <div className='card'>
         <div className='card-top'>
-            <img src={CardImg}/>
+            <img src={data.imgUrl}/>
         </div>
         <div className='card-bottom'>
             <Flex>
             <h3 className='card-title'>
-                Greek salad
+                {data.name}
             </h3>
-            <Price>$ 12.99</Price>
+            <Price>$ {data.price}</Price>
             </Flex>
             <p className='card-description'>
-            The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.
+            {data.description}
             </p>
             <OrderNowComponent />
         </div>

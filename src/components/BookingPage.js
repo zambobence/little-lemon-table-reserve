@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import BookingForm from './BookingForm';
+import Container from './Container';
 import {useReducer, useState} from 'react'
 import {fetchAPI, submitAPI} from '../MockAPI'
 import { useNavigate } from 'react-router-dom';
@@ -32,7 +33,10 @@ function BookingPage() {
 
   return (
     <>
-      <BookingForm fetchSlots={dispatch} availableSlots={state} handleFormChange={handleChange} handleSubmit={submitForm}/>
+      <Container>
+        <h1 className='display-title'>Book your table now</h1>
+        <BookingForm fetchSlots={dispatch} availableSlots={state} handleFormChange={handleChange} handleSubmit={submitForm}/>
+      </Container>
     </>
   )
 }
